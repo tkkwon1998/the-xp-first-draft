@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, styled } from "@material-ui/core";
+import TextBox from "./components/TextBox";
+import Menu from "./components/Menu";
+import RatingMenu from "./components/RatingMenu";
+import { textAlign, height } from "@material-ui/system";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Menu />
+      <TextBox />
+      <Container1>Did you like this article?</Container1>
+      <RatingMenu />
     </div>
   );
 }
+
+const Container1 = styled(Container)({
+  textAlign: "center",
+  fontWeight: "bold",
+  height: "100px"
+});
 
 export default App;
